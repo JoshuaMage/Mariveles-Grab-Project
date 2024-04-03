@@ -1,9 +1,8 @@
 @media (max-width: 767px) {
     body {
         width: 320px;
-        /* or any other fixed width */
         height: 480px;
-        /* or any other fixed height */
+        overflow-x: hidden;
     }
 }
 
@@ -11,103 +10,146 @@
 @media (min-width: 768px) {
     body {
         width: 1024px;
-        /* or any other fixed width */
         height: 768px;
-        /* or any other fixed height */
+        overflow-x: hidden;
+        background-color: #F0F0F0;
     }
 }
 
-.Header {
-    display: flex;
-    height: 80px;
-    font-family: 'Courier New', Courier, monospace;
-    align-items: center;
-    text-align: center;
-    margin: 0 20px;
-    gap: 20px;
-
+#Commercial {
+    width: 1255px;
+    height: auto;
+    margin-bottom: 0px;
+    padding: 0;
+    border-radius: 5px;
+    opacity: .9;
 }
 
-.Header .menuList {
-    padding-right: 50px;
+/* Media Query for Mobile Devices */
+
+#videoAddComment {
+    position: relative;
+    bottom: 300px;
+    left: 80px;
+    color: white;
+    font-size: 50px;
+}
+
+#ReadAbout {
+    width: 1224px;
     font-size: 25px;
-}
-
-.Header .menuList:hover {
-    font-size: 30 px;
-}
-
-.Header>.HeaderLeft,
-input {
-    position: relative;
-    left: 30rem;
-    transition: width .5s;
-}
-
-.Header>input {
-    width: 75px;
-
-}
-
-.Header>input:hover {
-    width: 150px
-}
-
-.Header a {
-    font-size: 20px;
-    text-decoration: none;
-    color: green;
-    font-weight: bold;
-
-}
-
-.Header+.HeaderTabBar,
-button {
+    font-family: sans-serif;
     display: flex;
-    flex-direction: column;
-    font-size: 18px;
-    border: none;
-    background-color: transparent;
-    padding: 15px 0;
-}
-
-.Header+.HeaderTabBar,
-button:hover {
-    color: red;
-    font-weight: bold;
-}
-
-#ApplyGrab {
-    position: relatisve;
-    left: 68%;
-
-}
-
-
-#aboutGrab a {
     text-decoration: none;
-    flex-wrap: wrap;
-    color: black;
+    color: white;
+    background-color: #00804a;
+    margin-bottom: -10px;
+    margin-top: -203px;
+    padding: 15px;
+}
+
+#Downloadapp {
+    width: 1224px;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-decoration: none;
+    display: flex;
+    color: white;
+    background-color: #ADBC9F;
+    margin-top: -10px;
+    padding: 15px;
+}
+
+#platform {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+}
+
+.middle-Container {
+    display: grid;
+    margin-left: 20px;
+    /* Left margin */
+    margin-right: 20px;
+}
+
+
+#button-container menu {
+    display: flex;
+    justify-content: center;
+    /* Center the buttons horizontally */
+}
+
+
+#button-container button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 15px;
+    box-sizing: border-box;
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #697078;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+    align-items: center;
 }
 
-#aboutGrab p {
-    flex-wrap: wrap;
+.middle-Container button:hover {
+    color: white;
+    background-color: black;
+    cursor: grabbing;
+
 }
 
+.custom-hr {
+    width: 75rem;
+    margin: 20px 0;
+    /* Add some margin above and below the horizontal line */
+    border: none;
+    border-top: 3px solid #697078;
+    /* Line color */
+}
 
+#middleDetails {
+    overflow-x: hidden;
+}
 
-#aboutGrab {
+#middleDetails h2 {
     position: relative;
-    width: fit-content;
-    padding: 10px;
-    gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(5, 200px);
-    grid-template-rows: repeat(2, 130px);
-    bottom: 18em;
-    left: 180px;
-    background-color: transparent;
+    top: 100px;
+    left: 50px;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#middleDetails img {
+    position: relative;
+    left: 500px;
+    width: 70px;
+    height: 70 px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#middleDetails button {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#middleDetails p {
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#middleDetails button,
+p {
+    position: relative;
+    left: 600px;
+    bottom: 85px;
 }
