@@ -1,24 +1,28 @@
 import React, { useState } from "react";
 import Menu from "./Header/Menu";
 import "./App.css";
+import { MENUDETAILS } from "./Header/headerDetails";
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [applyGrab, setApplyGrab] = useState(false);
+  const [selectedMenu, SetSelectedMenu] = useState(null);
 
   function handleSelect(menuItem) {
-    console.log(`Selected: ${menuItem}`);
+    SetSelectedMenu(menuItem);
+    console.log(menuItem);
   }
 
   function headerMenu() {
     setMenuVisible(!menuVisible);
-    setApplyGrab(false)
-    
+    setApplyGrab(false);
+    SetSelectedMenu(null);
   }
 
   function handleApplicant() {
     setApplyGrab(!applyGrab);
-    setMenuVisible(false)
+    setMenuVisible(false);
+    SetSelectedMenu(null);
   }
 
   return (
@@ -35,7 +39,7 @@ function App() {
         <input type="text" placeholder="Search" />
       </section>
 
-      <section className="AboutButton">
+      <section id="AboutButton">
         {menuVisible && (
           <menu>
             <Menu onSelect={() => handleSelect("About")}>About</Menu>
@@ -46,6 +50,17 @@ function App() {
           </menu>
         )}
       </section>
+
+      {selectedMenu && (
+        <div id="aboutGrab">
+          {MENUDETAILS[selectedMenu].map((item, index) => (
+            <div key={index}>
+              <a href="">{item.label}</a>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
       <section id="ApplyGrab">
         {applyGrab && (

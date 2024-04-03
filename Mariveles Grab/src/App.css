@@ -1,9 +1,20 @@
-body {
-    width: 100%;
-    height: 100vh;
-    margin: 0px;
-    padding: 0;
-    overflow: hidden;
+@media (max-width: 767px) {
+    body {
+        width: 320px;
+        /* or any other fixed width */
+        height: 480px;
+        /* or any other fixed height */
+    }
+}
+
+/* For computers */
+@media (min-width: 768px) {
+    body {
+        width: 1024px;
+        /* or any other fixed width */
+        height: 768px;
+        /* or any other fixed height */
+    }
 }
 
 .Header {
@@ -23,21 +34,22 @@ body {
 }
 
 .Header .menuList:hover {
-    font-size: 30   px;
+    font-size: 30 px;
 }
 
-.Header > .HeaderLeft, input {
+.Header>.HeaderLeft,
+input {
     position: relative;
     left: 30rem;
     transition: width .5s;
 }
 
-.Header > input {
+.Header>input {
     width: 75px;
-    
+
 }
 
-.Header > input:hover {
+.Header>input:hover {
     width: 150px
 }
 
@@ -49,7 +61,8 @@ body {
 
 }
 
-.Header + .HeaderTabBar, button {
+.Header+.HeaderTabBar,
+button {
     display: flex;
     flex-direction: column;
     font-size: 18px;
@@ -58,14 +71,43 @@ body {
     padding: 15px 0;
 }
 
-.Header + .HeaderTabBar, button:hover {
-  color: red;
-  font-weight: bold;
+.Header+.HeaderTabBar,
+button:hover {
+    color: red;
+    font-weight: bold;
 }
 
 #ApplyGrab {
-   position: relative;
-   left: 62.8%;
+    position: relatisve;
+    left: 68%;
 
-  } 
+}
 
+
+#aboutGrab a {
+    text-decoration: none;
+    flex-wrap: wrap;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#aboutGrab p {
+    flex-wrap: wrap;
+}
+
+
+
+#aboutGrab {
+    position: relative;
+    width: fit-content;
+    padding: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(2, 130px);
+    bottom: 18em;
+    left: 180px;
+    background-color: transparent;
+}
