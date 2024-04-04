@@ -143,12 +143,15 @@
 }
 
 #middleDetails p {
+    position: relative;
+    left: 600px;
+    bottom: 85px;
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#middleDetails button,
-p {
+#middleDetails button
+ {
     position: relative;
     left: 600px;
     bottom: 85px;
