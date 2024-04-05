@@ -1,0 +1,31 @@
+#footer {
+    display: grid;
+    grid-template-columns: .5fr .5fr 1fr .4fr .4fr .4fr;
+    padding: 50px 0;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+#footer svg {
+    position: relative;
+    left: 180px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid wheat;
+    border-radius: 30%;
+
+}
+
+#footer button {
+    font-weight: bold;
+    font-family: sans-serif;
+    width: fit-content;
+
+}
+
+#footer p {
+    position: relative;
+    left: 100px;
+}
