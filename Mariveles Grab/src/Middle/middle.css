@@ -146,6 +146,8 @@
 }
 
 #newsContainer h2 {
+    position: relative;
+    bottom: 15px;
     font-size: 40px;
     font-family: serif;
 }
@@ -184,6 +186,10 @@
     font-family: sans-serif;
     font-weight: bold;
     color: #337357;
+}
+
+#readMore p:hover {
+    color: #004225;
 }
 
 #newsContainer button {
