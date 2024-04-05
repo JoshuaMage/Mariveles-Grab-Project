@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Menu from "./Menu.jsx";  // Corrected file extension
 import "./../App.css";  // Corrected path for App.css
 import "./header.css";
-import { MENUDETAILS } from "./headerDetails";  // Corrected path
+import { MENUDETAILS } from "./headerDetails.js";  // Corrected path
 
 export default function HeaderMenu() {
     const [menuVisible, setMenuVisible] = useState(false);
